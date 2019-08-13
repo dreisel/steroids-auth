@@ -37,7 +37,6 @@ func (o *Options) String() string {
 func Connect() *gorm.DB {
 	db, err := gorm.Open("postgres", dbOptions.String())
 	if err != nil {
-		fmt.Println("WHAT THE FUCK", err)
 		panic(err.Error())
 	}
 	return db
